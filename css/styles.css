@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Raleway:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: whitesmoke;
+}
+
+/*STYLE INDEX*/
+
+/*header*/
+
+header{
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(4px);
+}
+
+.logo{
+    height: 65px;
+}
+
+.menu{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    text-shadow: 0.5px 0.5px 0.5px grey;
+}
+
+/*animacion en menu*/
+
+.menu li:hover{ 
+    transform: scale(0.9);
+    background-color: rgb(5, 5, 5);
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+.menu li a:hover{
+    color: whitesmoke;
+}
+
+
+/*main*/
+
+.principal{
+    background-image: url("https://www.arquitecturaydiseno.es/medio/2021/12/28/0-exterior-casa-del-agua_8b632ab3_1280x794.jpg");
+    background-size: cover;
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-position-y: 10px;
+}
+
+
+.textoPrincipal h1{
+    font-size: 56px;
+    font-weight: bolder;
+    text-shadow: 3px 3px 2px black;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-left: 100px;
+    color: rgb(239, 231, 231);
+    padding-top: 200px;
+}
+
+.textoPrincipal p{
+    font-size: 22px;
+    font-weight: bolder;
+    text-shadow: 1.5px 1.5px 1px black;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    line-height: 30px;
+    margin: 70px 400px 0 100px;
+    color: whitesmoke;
+}
+
+.textoPrincipal button{
+    padding: 10px;
+    border-radius: 10px;
+    margin: 30px 0 0 100px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+.introduccion p{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    margin: 40px 300px 40px 300px;
+    line-height: 30px;
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
+
+/*animacion main*/
+
+.textoPrincipal button:hover{ 
+    transform: scale(0.9);
+    background-color: whitesmoke;
+    border-radius: 12px;
+    color: black;
+    border-color: whitesmoke;
+}
+
+/*footer*/
+
+.footer{
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+
+footer img{
+    height: 65px;
+    margin: 20px 0 20px 0;
+}
+
+.copy{
+    font-size: 13px;
+}
+
+.logoredes{
+    height: 30px;
+    margin: 2px;
+}
+
+/* Para trabajar las areas de html index */
+
+.principalindex{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+}
+
+.textoPrincipal{
+    justify-self: center;
+    align-self: center;
+}
+
+
+/*STYLE CONTACTO*/
+
+
+.tituloUbicacion{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    text-shadow: gray 1px 0;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+
+.mapa{
+    padding: 0 20px 0 20px;
+    width: 100%;
+}
+
+.formulario legend{
+    font-size: 24px;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-shadow: gray 1px 0;
+    margin-bottom: 10px;
+}
+
+.formulario div{
+    padding-left: 20px;
+    padding-bottom: 5px;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.botones input{
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+}
+
+.telefonos{
+    list-style: none;
+    font-size: 15px;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    line-height: 70px;
+    padding: 0px 0 10px 20px;
+}
+
+.ubicacion h3{
+    font-size: 17px;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    text-shadow: gray 1px 1px 1px;
+    padding: 0px 0 10px 20px;
+}
+
+.ubicacion p{
+    font-size: 15px;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    padding: 0 0 5px 20px;
+}
+
+.horario h3{
+    font-size: 15px;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    padding: 40px 0 5px 20px;
+}
+
+.horario p{
+    font-size: 15px;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    padding: 0 0 5px 20px;
+}
+
+/* Para trabajar las areas de html contacto */
+
+.consultasdatos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "formulario telefonos ubicacion";
+    gap: 100px;
+    margin-top: 30px;
+}
+
+.formulario{
+    grid-area: formulario;
+    margin: 0 0 20px 20px;
+}
+
+.ubicacionHorario{
+    grid-area: ubicacion;
+    justify-self: end;
+    padding-right: 20px;
+}
+
+.emailtelefonos{
+    grid-area: telefonos;
+    justify-self: center;
+}
+/*animacion contacto*/
+
+.botones input:hover{
+    transform: scale(0.9);
+    background-color: whitesmoke;
+    border-radius: 12px;
+    color: black;
+    border-color: rgb(36, 36, 36);
+}
+
+
+/*STYLE NOSOTRAS*/
+
+.titulonosotras{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    text-shadow: gray 1px 0;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+
+.parrafonosotras{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 30px;
+    padding-left: 15px;
+}
+
+.nombresarquitectas p{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    padding-top: 5px;
+}
+
+/*STYLE PROYECTOS*/
+
+.tituloproyectos{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    text-shadow: gray 1px 0;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+.proyecto01 img{
+    width: 600px;
+    align-self: center;
+}
+
+.proyecto01 h3{
+    font-size: 18px;
+    font-weight: 900;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 0px;
+    text-shadow: gray 1px 0;
+    text-align: center;
+}
+
+.proyecto01 p{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.proyecto02 img{
+    width: 600px;
+    align-self: center;
+}
+
+.proyecto02 h3{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 0px;
+    text-shadow: gray 1px 0;
+    text-align: center;
+}
+
+.proyecto02 p{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.proyecto03 img{
+    width: 600px;
+    align-self: center;
+}
+
+.proyecto03 h3{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 0px;
+    text-shadow: gray 1px 0;
+    text-align: center;
+}
+
+.proyecto03 p{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.proyecto04 img{
+    width: 600px;
+    align-self: center;
+}
+
+.proyecto04 h3{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 0px;
+    text-shadow: gray 1px 0;
+    text-align: center;
+}
+
+.proyecto04 p{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+/* Para trabajar las areas de html proyectos */
+
+.proyectos{
+    width: 100%;
+}
+
+.listadoproyectos{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    row-gap: 10px;
+}
+
+
+/*STYLE SERVICIOS*/
+
+.tituloservicios{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    font-weight: 1500;
+    text-shadow: gray 1px 0;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+
+.servicio01 img{
+    height: 300px;
+    padding-left: 130px;
+}
+
+.servicio02 img{
+    height: 300px;
+    padding-left: 20px;
+}
+
+.servicio03 img{
+    height: 300px;
+    padding-left: 20px;
+}
+
+.servicio04 img{
+    height: 300px;
+    padding-left: 20px;
+    padding-right: 130px;
+}
+
+.servicio01 h3{
+    font-size: 16px;
+    font-weight: 900;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 130px;
+    text-shadow: gray 1px 0;
+}
+
+.servicio02 h3{
+    font-size: 16px;
+    font-weight: 900;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 20px;
+    text-shadow: gray 1px 0;
+}
+
+.servicio03 h3{
+    font-size: 16px;
+    font-weight: 900;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 20px;
+    text-shadow: gray 1px 0;
+}
+
+.servicio04 h3{
+    font-size: 16px;
+    font-weight: 900;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 20px;
+    text-shadow: gray 1px 0;
+}
+
+.servicio01 p{
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 130px;
+}
+
+.servicio02 p{
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 20px;
+}
+
+.servicio03 p{
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 0px 10px 20px;
+}
+
+.servicio04 p{
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    margin: 10px 120px 10px 20px;
+}
+
+/* Para trabajar las areas de html servicios */
+
+.servicios{
+    width: 100%;
+}
+.gruposervicios{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 0.5fr;
+}
+
