@@ -58,7 +58,6 @@ header{
     background-position-y: 10px;
 }
 
-
 .textoPrincipal h1{
     font-size: 56px;
     font-weight: bolder;
@@ -86,7 +85,6 @@ header{
     padding: 10px;
     border-radius: 10px;
     margin: 30px 0 0 100px;
-    margin-top: 30px;
     background-color: black;
     color: white;
     font-size: 14px;
@@ -517,3 +515,116 @@ footer img{
     grid-template-columns: 1fr 0.5fr 1fr 0.5fr;
 }
 
+/* Estilos Mobile */
+
+@media screen and (max-width:768px){
+    
+    /*index*/
+    .principal{
+        background-size: auto;
+        height: 110vh;
+    }
+    
+    .textoPrincipal h1{
+        font-size: 36px;
+        margin-left: 50px;
+        padding-top: 200px;
+    }
+
+    .principal .textoPrincipal p{
+        font-size: 18px;
+        margin: 30px 80px 0 50px;
+    }
+   
+    .textoPrincipal button{
+        margin: 20px 0 0 50px;
+    }
+
+    .introduccion p{
+        font-size: 16px;
+        margin: 10px 50px 10px 50px;
+    }
+
+    /*servicios*/
+    .gruposervicios{
+        display:inline;
+        text-align: center;
+    }
+
+    /*proyectos*/
+    
+    .listadoproyectos{
+        display: inline;
+        text-align: center;
+    }
+
+    .servicio01 img{
+        padding-left: 0px;
+    }
+    .servicio01 h3{
+        margin: 10px;
+    }
+    .servicio01 p{
+        margin: 10px;
+    }
+
+    .servicio04 img{
+        padding-right: 0px;
+    }
+    .servicio04 p{
+        margin: 10px;
+    }
+
+    /*contacto*/
+
+    .tituloUbicacion{
+        display: none;
+    }
+    .mapa{
+        display: none;
+    }
+
+    .formulario legend{
+        text-transform: uppercase;
+        font-size: 28px;
+        text-align: center;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .consultasdatos{
+        display: inline;
+        text-align: center;
+    }
+    
+    .formulario{
+        margin: 0px;
+    }
+    
+    .ubicacionHorario{
+        text-align:center;
+        padding-right: 0px;
+        margin-top: 20px;
+    }
+    
+    .emailtelefonos{
+        display: none;
+    }
+    .horario{
+        display: none;
+    }
+
+    /*footer*/
+
+    .logos-footer{
+        text-align: center;
+    }
+
+    .horario-footer{
+        display: none;
+    }
+
+    .contacto-footer{
+        display: none;
+    }
+
+}
