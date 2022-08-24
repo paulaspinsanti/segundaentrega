@@ -1,0 +1,148 @@
+//linea de comentario
+/* para ambos archivos */
+
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Raleway:wght@100&display=swap');
+
+@import "utilities/variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//NESTING
+
+/*STYLE INDEX*/
+
+body{
+    background-color: $color-secundario;
+    /*header*/
+    header{
+        padding: 10px;
+        border-bottom: 1px solid $color-principal;
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(4px);
+        div{
+            .logo{
+                height: 65px;
+            }
+            nav{
+                div{
+                    div{
+                        .menu{
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            font-family: $tipografia;
+                            font-weight: bolder;
+                            text-shadow: 0.5px 0.5px 0.5px grey;
+                            /*animacion menu*/
+                            li:hover{
+                                transform: scale(0.9);
+                                background-color: $color-principal;
+                                border-radius: 10px;
+                                color: $color-secundario;
+                                a:hover{
+                                    color: $color-secundario;
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+    
+    /*main*/
+    .principal{
+        background-image: url("https://www.arquitecturaydiseno.es/medio/2021/12/28/0-exterior-casa-del-agua_8b632ab3_1280x794.jpg");
+        background-size: cover;
+        height: 120vh;
+        background-repeat: no-repeat;
+        background-position-y: 10px;
+        .textoPrincipal{
+            h1{
+                font-size: 56px;
+                font-weight: bolder;
+                text-shadow: 3px 3px 2px black;
+                font-family: $tipografia;
+                text-transform: uppercase;
+                letter-spacing: 8px;
+                margin-left: 100px;
+                color: $color-tipografia-b;
+                padding-top: 200px;
+            }
+            p{
+                font-size: 22px;
+                font-weight: bolder;
+                text-shadow: 1.5px 1.5px 1px black;
+                font-family: $tipografia;
+                font-style: italic;
+                line-height: 30px;
+                margin: 70px 400px 0 100px;
+                color: $color-tipografia-b;
+            }
+            button{
+                padding: 10px;
+                border-radius: 10px;
+                border-color: $color-botones;
+                margin: 30px 0 0 100px;
+                background-color: $color-botones;
+                color: $color-tipografia-b;
+                font-size: 14px;
+            }
+            //animacion main
+            button:hover{
+                transform: scale(0.9);
+                background-color: $color-secundario;
+                border-radius: 12px;
+                color:$color-tipografia-n;
+                border-color: $color-secundario;
+            }
+        }
+    }
+    
+    /*section*/
+    .introduccion{
+        p{
+        font-size: 18px;
+        font-weight: bold;
+        font-family: $tipografia;
+        margin: 40px 300px 40px 300px;
+        line-height: 30px;
+        color: $color-tipografia-n;
+        text-align: center;
+        font-style: italic;
+        }
+    }
+    
+    /*footer*/
+    .footer{
+        background-color: $color-principal;
+        font-family: $tipografia;
+        font-size: 15px;
+        div{
+            div{
+                .logos-footer{
+                    a{
+                        .logo-footer{
+                            height: 65px;
+                            margin: 20px 0 20px 0;
+                        }
+                    }
+                    div{
+                        .logoredes{
+                            height: 30px;
+                            margin: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        .copy{
+            font-size: 13px;
+        }
+    }
+}
