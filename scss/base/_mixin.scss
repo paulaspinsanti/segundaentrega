@@ -1,0 +1,14 @@
+
+@mixin medidas($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin estilo-tituloprincipal{
+                font-weight: bolder;
+                text-shadow: 3px 3px 2px black;
+                text-transform: uppercase;
+                letter-spacing: 8px;
+                margin-left: 100px;
+                padding-top: 200px;
+}

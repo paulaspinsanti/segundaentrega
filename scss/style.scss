@@ -3,7 +3,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Raleway:wght@100&display=swap');
 
-@import "utilities/variables";
+@import "base/variables";
+@import "base/mapas";
+@import "base/listas";
+@import "base/mixin";
+@import "base/extend";
 
 *{
     margin: 0;
@@ -32,7 +36,7 @@ body{
                 div{
                     div{
                         .menu{
-                            font-size: 16px;
+                            font-size: nth($tamaño-fuente,3);
                             text-transform: uppercase;
                             font-family: $tipografia;
                             font-weight: bolder;
@@ -64,34 +68,29 @@ body{
         background-position-y: 10px;
         .textoPrincipal{
             h1{
-                font-size: 56px;
-                font-weight: bolder;
-                text-shadow: 3px 3px 2px black;
+                @include estilo-tituloprincipal;
+                font-size: nth($tamaño-fuente,6);
                 font-family: $tipografia;
-                text-transform: uppercase;
-                letter-spacing: 8px;
-                margin-left: 100px;
                 color: $color-tipografia-b;
-                padding-top: 200px;
             }
             p{
-                font-size: 22px;
+                font-size: nth($tamaño-fuente,5);
                 font-weight: bolder;
                 text-shadow: 1.5px 1.5px 1px black;
+                background-color: rgba(0, 0, 0, 0.3);
                 font-family: $tipografia;
                 font-style: italic;
                 line-height: 30px;
-                margin: 70px 400px 0 100px;
+                margin: 70px 450px 0 100px;
                 color: $color-tipografia-b;
+                padding: 10px;
             }
             button{
-                padding: 10px;
-                border-radius: 10px;
-                border-color: $color-botones;
-                margin: 30px 0 0 100px;
-                background-color: $color-botones;
-                color: $color-tipografia-b;
-                font-size: 14px;
+                @extend %box;
+                border-color: map-get($map: $standard, $key: border-standard );
+                background-color: map-get($map: $standard, $key: bg-standard );
+                color: map-get($map: $standard, $key: color-standard );
+                font-size: map-get($map: $standard, $key: font-standard );
             }
             //animacion main
             button:hover{
@@ -107,7 +106,7 @@ body{
     /*section*/
     .introduccion{
         p{
-        font-size: 18px;
+        font-size: nth($tamaño-fuente,4);
         font-weight: bold;
         font-family: $tipografia;
         margin: 40px 300px 40px 300px;
@@ -116,13 +115,32 @@ body{
         text-align: center;
         font-style: italic;
         }
+        a{
+            button{
+                @extend %box;
+                border-color: map-get($map: $standard, $key: border-standard );
+                background-color: map-get($map: $standard, $key: bg-standard );
+                color: map-get($map: $standard, $key: color-standard );
+                font-size: map-get($map: $standard, $key: font-standard );
+            }
+            //animacion main
+            button:hover{
+                transform: scale(0.9);
+                background-color: $color-secundario;
+                border-radius: 12px;
+                color:$color-tipografia-n;
+                border-color: $color-secundario;
+            }
+
+        }
+        
     }
     
     /*footer*/
     .footer{
         background-color: $color-principal;
         font-family: $tipografia;
-        font-size: 15px;
+        font-size: nth($tamaño-fuente,2);
         div{
             div{
                 .logos-footer{
@@ -142,7 +160,7 @@ body{
             }
         }
         .copy{
-            font-size: 13px;
+            font-size: nth($tamaño-fuente,1);
         }
     }
 }

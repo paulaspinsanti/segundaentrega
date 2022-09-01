@@ -1,5 +1,10 @@
 /* para ambos archivos */
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Raleway:wght@100&display=swap");
+body .principal .textoPrincipal button, body .introduccion a button {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 30px 0 0 100px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -41,31 +46,30 @@ body {
     background-repeat: no-repeat;
     background-position-y: 10px; }
     body .principal .textoPrincipal h1 {
-      font-size: 56px;
       font-weight: bolder;
       text-shadow: 3px 3px 2px black;
-      font-family: "Raleway", sans-serif;
       text-transform: uppercase;
       letter-spacing: 8px;
       margin-left: 100px;
-      color: #f5ecec;
-      padding-top: 200px; }
+      padding-top: 200px;
+      font-size: 56px;
+      font-family: "Raleway", sans-serif;
+      color: #f5ecec; }
     body .principal .textoPrincipal p {
       font-size: 22px;
       font-weight: bolder;
       text-shadow: 1.5px 1.5px 1px black;
+      background-color: rgba(0, 0, 0, 0.3);
       font-family: "Raleway", sans-serif;
       font-style: italic;
       line-height: 30px;
-      margin: 70px 400px 0 100px;
-      color: #f5ecec; }
-    body .principal .textoPrincipal button {
-      padding: 10px;
-      border-radius: 10px;
-      border-color: black;
-      margin: 30px 0 0 100px;
-      background-color: black;
+      margin: 70px 450px 0 100px;
       color: #f5ecec;
+      padding: 10px; }
+    body .principal .textoPrincipal button {
+      border-color: 1px solid black;
+      background-color: black;
+      color: white;
       font-size: 14px; }
     body .principal .textoPrincipal button:hover {
       transform: scale(0.9);
@@ -82,10 +86,21 @@ body {
     color: #1a1a1a;
     text-align: center;
     font-style: italic; }
+  body .introduccion a button {
+    border-color: 1px solid black;
+    background-color: black;
+    color: white;
+    font-size: 14px; }
+  body .introduccion a button:hover {
+    transform: scale(0.9);
+    background-color: whitesmoke;
+    border-radius: 12px;
+    color: #1a1a1a;
+    border-color: whitesmoke; }
   body .footer {
     background-color: #232323;
     font-family: "Raleway", sans-serif;
-    font-size: 15px; }
+    font-size: 14px; }
     body .footer div div .logos-footer a .logo-footer {
       height: 65px;
       margin: 20px 0 20px 0; }
@@ -93,4 +108,4 @@ body {
       height: 30px;
       margin: 2px; }
     body .footer .copy {
-      font-size: 13px; }
+      font-size: 12px; }
