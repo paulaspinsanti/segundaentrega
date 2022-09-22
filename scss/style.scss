@@ -66,12 +66,21 @@ body{
         height: 120vh;
         background-repeat: no-repeat;
         background-position-y: 10px;
+        @include media-up (md){
+                background-size: auto;
+                height: 110vh;
+        }
         .textoPrincipal{
             h1{
                 @include estilo-tituloprincipal;
                 font-size: nth($tamaño-fuente,6);
                 font-family: $tipografia;
                 color: $color-tipografia-b;
+                @include media-up (md){
+                    font-size: 36px;
+                    margin-left: 50px;
+                    padding-top: 200px;
+                }
             }
             p{
                 font-size: nth($tamaño-fuente,5);
@@ -84,6 +93,10 @@ body{
                 margin: 70px 450px 0 100px;
                 color: $color-tipografia-b;
                 padding: 10px;
+                @include media-up (md){
+                    font-size: 18px;
+                    margin: 30px 80px 0 50px;
+                }
             }
             button{
                 @extend %box;
@@ -91,6 +104,10 @@ body{
                 background-color: map-get($map: $standard, $key: bg-standard );
                 color: map-get($map: $standard, $key: color-standard );
                 font-size: map-get($map: $standard, $key: font-standard );
+                margin: 30px 0 0 100px;
+                @include media-up (md){
+                    margin: 20px 0 0 50px;
+                }
             }
             //animacion main
             button:hover{
@@ -106,22 +123,22 @@ body{
 /*section*/
     .introduccion{
         p{
-        font-size: nth($tamaño-fuente,4);
-        font-weight: bold;
-        font-family: $tipografia;
-        margin: 40px 300px 40px 300px;
-        line-height: 30px;
-        color: $color-tipografia-n;
-        text-align: center;
-        font-style: italic;
+            @include estilo-parrafo;
+            margin: 40px 300px 40px 300px;
+            @include media-up (md){
+                font-size: 16px;
+                margin: 10px 50px 10px 50px;
+            }
         }
         a{
+            display: flex;
+            justify-content: center;
             button{
                 @extend %box;
                 border-color: map-get($map: $standard, $key: border-standard );
                 background-color: map-get($map: $standard, $key: bg-standard );
                 color: map-get($map: $standard, $key: color-standard );
-                font-size: map-get($map: $standard, $key: font-standard );
+                font-size: map-get($map: $standard, $key: font-standard );             
             }
             //animacion main
             button:hover{
@@ -131,11 +148,9 @@ body{
                 color:$color-tipografia-n;
                 border-color: $color-secundario;
             }
-
         }
-        
     }
-    
+
 /*footer*/
     .footer{
         background-color: $color-principal;
@@ -144,6 +159,9 @@ body{
         div{
             div{
                 .logos-footer{
+                    @include media-up (md){
+                        text-align: center;
+                    }
                     a{
                         .logo-footer{
                             height: 65px;
@@ -151,12 +169,23 @@ body{
                         }
                     }
                     div{
+                        margin-left: 20px;
                         .logoredes{
                             height: 30px;
                             margin: 2px;
                         }
                     }
                 }
+                .horario-footer{
+                    @include media-up (md){
+                        display: none;
+                    }
+                }
+                .contacto-footer{
+                    @include media-up (md){
+                        display: none;
+                    }
+                }  
             }
         }
         .copy{
@@ -170,16 +199,18 @@ body{
 body{
     main{
         .tituloUbicacion{
-            font-size: 28px;
-            text-transform: uppercase;
-            font-family: 'Raleway', sans-serif;
-            text-shadow: gray 1px 0;
-            text-align: center;
-            padding: 20px 20px 20px 20px;
+            @include estilo-titulospag;
+            @include media-up (md){
+                display: none;
+                font-size: 24px;
+            }
         }
         .mapa{
             padding: 0 20px 0 20px;
             width: 100%;
+            @include media-up (md){
+                display: none;
+            }
         }
         .consultasdatos{
             /* Para trabajar las areas de Contacto*/
@@ -189,24 +220,38 @@ body{
             grid-template-areas: "formulario telefonos ubicacion";
             gap: 100px;
             margin-top: 30px;
+            @include media-up (md){
+                display: inline;
+                text-align: center;
+            }
             form{
                 .formulario{
                     /* Para trabajar las areas de Contacto*/
                     grid-area: formulario;
                     margin: 0 0 20px 20px;
+                    @include media-up (md){
+                        margin: 0px;
+                    }
                     legend{
-                        font-size: 24px;
-                        font-family: 'Raleway', sans-serif;
+                        font-size: nth($tamaño-fuente,5);
+                        font-family: $tipografia;
                         font-weight: bold;
                         text-shadow: gray 1px 0;
                         margin-bottom: 10px;
+                        @include media-up (md){
+                            text-transform: uppercase;
+                            font-size: 28px;
+                            text-align: center;
+                            padding: 20px 0px 20px 0px;
+                            font-size: 24px;
+                        }
                     }
                     div{
                         padding-left: 20px;
                         padding-bottom: 5px;
-                        font-family: 'Raleway', sans-serif;
+                        font-family: $tipografia;
                         font-weight: bolder;
-                        font-size: 15px;
+                        font-size: nth($tamaño-fuente,3);
                     }
                     .botones{
                         input{
@@ -215,14 +260,15 @@ body{
                             background-color: map-get($map: $standard, $key: bg-standard );
                             color: map-get($map: $standard, $key: color-standard );
                             font-size: map-get($map: $standard, $key: font-standard );
+                            font-weight: map-get($map: $standard, $key: weight-standard ); 
                         }
                         // animacion contacto
                         input:hover{
                             transform: scale(0.9);
-                            background-color: whitesmoke;
+                            background-color: $color-secundario;
                             border-radius: 12px;
-                            color: black;
-                            border-color: rgb(36, 36, 36);
+                            color:$color-tipografia-n;
+                            border-color: $color-secundario;
                         }
                     }
                 }
@@ -231,9 +277,12 @@ body{
                  /* Para trabajar las areas de Contacto*/
                  grid-area: telefonos;
                  justify-self: center;
+                 @include media-up (md){
+                    display: none;
+                }
                 .telefonos{
-                    font-size: 15px;
-                    font-family: 'Raleway', sans-serif;
+                    font-size: nth($tamaño-fuente,3);
+                    font-family: $tipografia;
                     font-weight: bolder;
                     line-height: 50px;
                 }
@@ -243,31 +292,46 @@ body{
                 grid-area: ubicacion;
                 justify-self: end;
                 padding-right: 20px;
+                @include media-up (md){
+                    text-align:center;
+                    padding-right: 0px;
+                    margin-top: 20px;
+                }
                 .ubicacion{
                     h2{
-                        font-size: 17px;
-                        font-family: 'Raleway', sans-serif;
+                        font-size: nth($tamaño-fuente,4);
+                        font-family: $tipografia;
                         font-weight: bolder;
                         text-shadow: gray 1px 1px 1px;
                         padding: 10px 0 10px 20px;
+                        @include media-up (md){
+                            font-size: nth($tamaño-fuente,3);
+                        }
                     }
                     p{
-                        font-size: 15px;
-                        font-family: 'Raleway', sans-serif;
+                        font-size: nth($tamaño-fuente,3);
+                        font-family: $tipografia;
                         font-weight: bolder;
                         padding: 0 0 5px 20px; 
+                        @include media-up (md){
+                            font-size: nth($tamaño-fuente,2);
+                        }
                     }
                 }
                 .horario{
+                    @include media-up (md){
+                        display: none;
+                    }
                     h2{
-                        font-size: 15px;
-                        font-family: 'Raleway', sans-serif;
+                        font-size: nth($tamaño-fuente,3);
+                        font-family: $tipografia;
                         font-weight: bolder;
                         padding: 80px 0 5px 20px;
+                        text-decoration: underline;
                     }
                     p{
-                        font-size: 15px;
-                        font-family: 'Raleway', sans-serif;
+                        font-size: nth($tamaño-fuente,3);
+                        font-family: $tipografia;
                         font-weight: bolder;
                         padding-left: 20px;
                     }
@@ -282,26 +346,27 @@ body{
 body{
     .introduccionnosotras{
         .titulonosotras{
-            font-size: 28px;
-            text-transform: uppercase;
-            font-family: 'Raleway', sans-serif;
-            text-shadow: gray 1px 0;
-            text-align: center;
-            padding: 20px 20px 20px 20px;
+            @include estilo-titulospag;
+            @include media-up (md){
+                font-size: 24px;
+            }
         }
         .parrafonosotras{
-            font-size: 18px;
-            font-weight: bold;
-            font-family: 'Raleway', sans-serif;
-            line-height: 30px;
-            padding-left: 15px;
+            @include estilo-parrafo;
+            margin: 0 10px 20px 10px;
+            @include media-up (md){
+                font-size: 16px;
+            }
         }
         .nombresarquitectas{
             p{
-                font-size: 14px;
-                font-weight: bold;
-                font-family: 'Raleway', sans-serif;
+                font-size: nth($tamaño-fuente,3);
+                font-family: $tipografia;
+                font-weight: bolder;
                 padding-top: 5px;
+                @include media-up (md){
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -314,12 +379,10 @@ body{
         /* Para trabajar las areas de html proyectos */
         width: 100%;
         .tituloproyectos{
-            font-size: 28px;
-            text-transform: uppercase;
-            font-family: 'Raleway', sans-serif;
-            text-shadow: gray 1px 0;
-            text-align: center;
-            padding: 20px 20px 20px 20px;
+            @include estilo-titulospag;
+            @include media-up (md){
+                font-size: 24px;
+            }
         }
         .listadoproyectos{
             /* Para trabajar las areas de html proyectos */
@@ -328,92 +391,108 @@ body{
             grid-template-rows: 1fr 1fr;
             justify-items: center;
             row-gap: 10px;
+            @include media-up (md){
+                display: inline;
+                text-align: center;
+            }
             .proyecto01{
                 img{
-                    width: 600px;
-                    align-self: center;
+                    @extend %img;
+                    @include media-up (md){
+                        width: 500px;
+                    }
                 }
                 h2{
-                    font-size: 18px;
-                    font-weight: bold;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
+                    @include estilo-titulos;
                     margin: 10px 0px 10px 0px;
-                    text-shadow: gray 1px 0;
                     text-align: center;
+                    @include media-up (md){
+                        font-size: 16px;
+                        margin: 10px 0px 0px 0px;
+                    }
                 }
                 p{
-                    font-size: 14px;
-                    font-weight: bold;
-                    font-family: 'Raleway', sans-serif;
-                    margin: 10px 0px 10px 0px;
-                    text-align: center; 
+                    @include estilo-descripcion;
+                    margin: 10px 0px 10px 0px; 
+                    text-align: center;
+                    @include media-up (md){
+                        margin: 0px 0px 10px 0px; 
+                    }
                 }
             }
             .proyecto02{
                 img{
-                    width: 600px;
-                    align-self: center;
+                    @extend %img;
+                    @include media-up (md){
+                        width: 500px;
+                    }
                 }
                 h2{
-                    font-size: 18px;
-                    font-weight: bold;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
+                    @include estilo-titulos;
                     margin: 10px 0px 10px 0px;
-                    text-shadow: gray 1px 0;
                     text-align: center;
+                    @include media-up (md){
+                        font-size: 16px;
+                        margin: 10px 0px 0px 0px;
+                    }
                 }
                 p{
-                    font-size: 14px;
-                    font-weight: bold;
-                    font-family: 'Raleway', sans-serif;
-                    margin: 10px 0px 10px 0px;
-                    text-align: center; 
+                    @include estilo-descripcion;
+                    margin: 10px 0px 10px 0px;  
+                    text-align: center;
+                    @include media-up (md){
+                        margin: 0px 0px 10px 0px; 
+                    }
                 }
             }
             .proyecto03{
                 img{
-                    width: 600px;
-                    align-self: center;
+                    @extend %img;
+                    @include media-up (md){
+                        width: 500px;
+                    }
                 }
                 h2{
-                    font-size: 18px;
-                    font-weight: bold;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
+                    @include estilo-titulos;
                     margin: 10px 0px 10px 0px;
-                    text-shadow: gray 1px 0;
                     text-align: center;
+                    @include media-up (md){
+                        font-size: 16px;
+                        margin: 10px 0px 0px 0px;
+                    }
                 }
                 p{
-                    font-size: 14px;
-                    font-weight: bold;
-                    font-family: 'Raleway', sans-serif;
-                    margin: 10px 0px 10px 0px;
+                    @include estilo-descripcion;
+                    margin: 10px 0px 10px 0px; 
                     text-align: center; 
+                    @include media-up (md){
+                        margin: 0px 0px 10px 0px; 
+                    }
                 }
             }
             .proyecto04{
                 img{
-                    width: 600px;
-                    align-self: center;
+                    @extend %img;
+                    @include media-up (md){
+                        width: 500px;
+                    }
                 }
                 h2{
-                    font-size: 18px;
-                    font-weight: bold;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
+                    @include estilo-titulos;
                     margin: 10px 0px 10px 0px;
-                    text-shadow: gray 1px 0;
                     text-align: center;
+                    @include media-up (md){
+                        font-size: 16px;
+                        margin: 10px 0px 0px 0px;
+                    }
                 }
                 p{
-                    font-size: 14px;
-                    font-weight: bold;
-                    font-family: 'Raleway', sans-serif;
-                    margin: 10px 0px 10px 0px;
-                    text-align: center; 
+                    @include estilo-descripcion;
+                    margin: 10px 0px 10px 0px; 
+                    text-align: center;
+                    @include media-up (md){
+                        margin: 0px 0px 10px 0px; 
+                    }
                 }
             }
         }
@@ -427,101 +506,121 @@ body{
         /* Para trabajar las areas de html servicios */
         width: 100%;
         .tituloservicios{
-            font-size: 28px;
-            text-transform: uppercase;
-            font-family: 'Ibarra Real Nova', serif; font-family: 'Raleway', sans-serif;
-            font-weight: 1500;
-            text-shadow: gray 1px 0;
-            text-align: center;
-            padding: 20px 20px 20px 20px;
+            @include estilo-titulospag;
+            @include media-up (md){
+                font-size: 24px;
+            }
         }
         .gruposervicios{
             /* Para trabajar las areas de html servicios */
             display: grid;
             grid-template-columns: 1fr 0.5fr 1fr 0.5fr;
+            @include media-up (md){
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+            }
             .servicio01{
+                @include media-up (md){
+                    margin: 0px 30px 0px 30px;
+                }
                 img{
                     height: 300px;
                     padding-left: 130px;
+                    @include media-up (md){
+                        padding-left: 0px;
+                    }
                 }
                 h2{
-                    font-size: 16px;
-                    font-weight: 900;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
+                    @include estilo-titulos;
                     margin: 10px 0px 10px 130px;
-                    text-shadow: gray 1px 0;
+                    @include media-up (md){
+                        margin: 10px 0px 5px 0px;
+                        font-size: 16px;
+                    }
                 }
                 p{
-                    font-size: 14px;
-                    font-weight: 900;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
+                    @include estilo-descripcion;
                     margin: 10px 0px 10px 130px;
+                    @include media-up (md){
+                        margin: 0px 50px 10px 50px;
+                    }
                 }
-            }
+            }   
             .servicio02{
+                @include media-up (md){
+                    margin: 0px 30px 0px 30px;
+                }
                 img{
                     height: 300px;
                     padding-left: 20px;
                 }
                 h2{
-                    font-size: 16px;
-                    font-weight: 900;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
-                    margin: 10px 0px 10px 20px;
-                    text-shadow: gray 1px 0;
+                    @include estilo-titulos;
+                    margin: 10px 0px 5px 20px;
+                    @include media-up (md){
+                        margin: 10px 0px 5px 0px;
+                        font-size: 16px;
+                    }
                 }
                 p{
-                    font-size: 14px;
-                    font-weight: 900;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
+                    @include estilo-descripcion;
                     margin: 10px 0px 10px 20px;
+                    @include media-up (md){
+                        margin: 0px 50px 10px 50px;
+                    }
                 }
             }
             .servicio03{
+                @include media-up (md){
+                    margin: 0px 30px 0px 30px;
+                }
                 img{
                     height: 300px;
                     padding-left: 20px;
                 }
                 h2{
-                    font-size: 16px;
-                    font-weight: 900;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
-                    margin: 10px 0px 10px 20px;
-                    text-shadow: gray 1px 0;
+                    @include estilo-titulos;
+                    margin: 10px 0px 5px 20px;
+                    @include media-up (md){
+                        margin: 10px 0px 5px 0px;
+                        font-size: 16px;
+                    }
                 }
                 p{
-                    font-size: 14px;
-                    font-weight: 900;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
+                    @include estilo-descripcion;
                     margin: 10px 0px 10px 20px;
+                    @include media-up (md){
+                        margin: 0px 50px 10px 50px;
+                    }
                 }
             }
             .servicio04{
+                @include media-up (md){
+                    margin: 0px 30px 0px 30px;
+                }
                 img{
                     height: 300px;
                     padding-left: 20px;
                     padding-right: 130px;
+                    @include media-up (md){
+                        padding-right: 0px;
+                    }
                 }
                 h2{
-                    font-size: 16px;
-                    font-weight: 900;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
-                    margin: 10px 0px 10px 20px;
-                    text-shadow: gray 1px 0;
+                    @include estilo-titulos;
+                    margin: 10px 0px 5px 20px;
+                    @include media-up (md){
+                        margin: 10px 0px 5px 0px;
+                        font-size: 16px;
+                    }
                 }
                 p{
-                    font-size: 14px;
-                    font-weight: 900;
-                    font-family: 'Raleway', sans-serif;
-                    line-height: 20px;
-                    margin: 10px 120px 10px 20px;
+                    @include estilo-descripcion;
+                    margin: 0px 120px 10px 20px;
+                    @include media-up (md){
+                        margin: 0px 50px 10px 50px;
+                    }
                 }
             }
         }

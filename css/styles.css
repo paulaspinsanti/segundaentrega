@@ -2,8 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Raleway:wght@100&display=swap");
 body .principal .textoPrincipal button, body .introduccion a button, body main .consultasdatos form .formulario .botones input {
   padding: 10px;
-  border-radius: 10px;
-  margin: 30px 0 0 100px; }
+  border-radius: 10px; }
+
+body .proyectos .listadoproyectos .proyecto01 img, body .proyectos .listadoproyectos .proyecto02 img, body .proyectos .listadoproyectos .proyecto03 img, body .proyectos .listadoproyectos .proyecto04 img {
+  width: 600px;
+  align-self: center; }
 
 * {
   margin: 0;
@@ -45,6 +48,10 @@ body {
     height: 120vh;
     background-repeat: no-repeat;
     background-position-y: 10px; }
+    @media screen and (max-width: 768px) {
+      body .principal {
+        background-size: auto;
+        height: 110vh; } }
     body .principal .textoPrincipal h1 {
       font-weight: bolder;
       text-shadow: 3px 3px 2px black;
@@ -55,6 +62,11 @@ body {
       font-size: 56px;
       font-family: "Raleway", sans-serif;
       color: #f5ecec; }
+      @media screen and (max-width: 768px) {
+        body .principal .textoPrincipal h1 {
+          font-size: 36px;
+          margin-left: 50px;
+          padding-top: 200px; } }
     body .principal .textoPrincipal p {
       font-size: 22px;
       font-weight: bolder;
@@ -66,11 +78,19 @@ body {
       margin: 70px 450px 0 100px;
       color: #f5ecec;
       padding: 10px; }
+      @media screen and (max-width: 768px) {
+        body .principal .textoPrincipal p {
+          font-size: 18px;
+          margin: 30px 80px 0 50px; } }
     body .principal .textoPrincipal button {
       border-color: 1px solid black;
       background-color: black;
       color: white;
-      font-size: 14px; }
+      font-size: 14px;
+      margin: 30px 0 0 100px; }
+      @media screen and (max-width: 768px) {
+        body .principal .textoPrincipal button {
+          margin: 20px 0 0 50px; } }
     body .principal .textoPrincipal button:hover {
       transform: scale(0.9);
       background-color: whitesmoke;
@@ -79,34 +99,52 @@ body {
       border-color: whitesmoke; }
   body .introduccion p {
     font-size: 18px;
-    font-weight: bold;
-    font-family: "Raleway", sans-serif;
-    margin: 40px 300px 40px 300px;
+    font-weight: bolder;
+    font-family: 'Raleway', sans-serif;
     line-height: 30px;
-    color: #1a1a1a;
+    color: black;
     text-align: center;
-    font-style: italic; }
-  body .introduccion a button {
-    border-color: 1px solid black;
-    background-color: black;
-    color: white;
-    font-size: 14px; }
-  body .introduccion a button:hover {
-    transform: scale(0.9);
-    background-color: whitesmoke;
-    border-radius: 12px;
-    color: #1a1a1a;
-    border-color: whitesmoke; }
+    font-style: italic;
+    margin: 40px 300px 40px 300px; }
+    @media screen and (max-width: 768px) {
+      body .introduccion p {
+        font-size: 16px;
+        margin: 10px 50px 10px 50px; } }
+  body .introduccion a {
+    display: flex;
+    justify-content: center; }
+    body .introduccion a button {
+      border-color: 1px solid black;
+      background-color: black;
+      color: white;
+      font-size: 14px; }
+    body .introduccion a button:hover {
+      transform: scale(0.9);
+      background-color: whitesmoke;
+      border-radius: 12px;
+      color: #1a1a1a;
+      border-color: whitesmoke; }
   body .footer {
     background-color: #232323;
     font-family: "Raleway", sans-serif;
     font-size: 14px; }
+    @media screen and (max-width: 768px) {
+      body .footer div div .logos-footer {
+        text-align: center; } }
     body .footer div div .logos-footer a .logo-footer {
       height: 65px;
       margin: 20px 0 20px 0; }
-    body .footer div div .logos-footer div .logoredes {
-      height: 30px;
-      margin: 2px; }
+    body .footer div div .logos-footer div {
+      margin-left: 20px; }
+      body .footer div div .logos-footer div .logoredes {
+        height: 30px;
+        margin: 2px; }
+    @media screen and (max-width: 768px) {
+      body .footer div div .horario-footer {
+        display: none; } }
+    @media screen and (max-width: 768px) {
+      body .footer div div .contacto-footer {
+        display: none; } }
     body .footer .copy {
       font-size: 12px; }
 
@@ -115,13 +153,22 @@ body main .tituloUbicacion {
   font-size: 28px;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
-  text-shadow: gray 1px 0;
+  text-shadow: #6e6e6e 2px 2px 3px;
   text-align: center;
-  padding: 20px 20px 20px 20px; }
+  padding: 20px 20px 20px 20px;
+  letter-spacing: 2px;
+  font-weight: bolder; }
+  @media screen and (max-width: 768px) {
+    body main .tituloUbicacion {
+      display: none;
+      font-size: 24px; } }
 
 body main .mapa {
   padding: 0 20px 0 20px;
   width: 100%; }
+  @media screen and (max-width: 768px) {
+    body main .mapa {
+      display: none; } }
 
 body main .consultasdatos {
   /* Para trabajar las areas de Contacto*/
@@ -131,40 +178,58 @@ body main .consultasdatos {
   grid-template-areas: "formulario telefonos ubicacion";
   gap: 100px;
   margin-top: 30px; }
+  @media screen and (max-width: 768px) {
+    body main .consultasdatos {
+      display: inline;
+      text-align: center; } }
   body main .consultasdatos form .formulario {
     /* Para trabajar las areas de Contacto*/
     grid-area: formulario;
     margin: 0 0 20px 20px; }
+    @media screen and (max-width: 768px) {
+      body main .consultasdatos form .formulario {
+        margin: 0px; } }
     body main .consultasdatos form .formulario legend {
-      font-size: 24px;
-      font-family: 'Raleway', sans-serif;
+      font-size: 22px;
+      font-family: "Raleway", sans-serif;
       font-weight: bold;
       text-shadow: gray 1px 0;
       margin-bottom: 10px; }
+      @media screen and (max-width: 768px) {
+        body main .consultasdatos form .formulario legend {
+          text-transform: uppercase;
+          font-size: 28px;
+          text-align: center;
+          padding: 20px 0px 20px 0px;
+          font-size: 24px; } }
     body main .consultasdatos form .formulario div {
       padding-left: 20px;
       padding-bottom: 5px;
-      font-family: 'Raleway', sans-serif;
+      font-family: "Raleway", sans-serif;
       font-weight: bolder;
-      font-size: 15px; }
+      font-size: 16px; }
     body main .consultasdatos form .formulario .botones input {
       border-color: 1px solid black;
       background-color: black;
       color: white;
-      font-size: 14px; }
+      font-size: 14px;
+      font-weight: bolder; }
     body main .consultasdatos form .formulario .botones input:hover {
       transform: scale(0.9);
       background-color: whitesmoke;
       border-radius: 12px;
-      color: black;
-      border-color: #242424; }
+      color: #1a1a1a;
+      border-color: whitesmoke; }
   body main .consultasdatos .emailtelefonos {
     /* Para trabajar las areas de Contacto*/
     grid-area: telefonos;
     justify-self: center; }
+    @media screen and (max-width: 768px) {
+      body main .consultasdatos .emailtelefonos {
+        display: none; } }
     body main .consultasdatos .emailtelefonos .telefonos {
-      font-size: 15px;
-      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-family: "Raleway", sans-serif;
       font-weight: bolder;
       line-height: 50px; }
   body main .consultasdatos .ubicacionHorario {
@@ -172,25 +237,40 @@ body main .consultasdatos {
     grid-area: ubicacion;
     justify-self: end;
     padding-right: 20px; }
+    @media screen and (max-width: 768px) {
+      body main .consultasdatos .ubicacionHorario {
+        text-align: center;
+        padding-right: 0px;
+        margin-top: 20px; } }
     body main .consultasdatos .ubicacionHorario .ubicacion h2 {
-      font-size: 17px;
-      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      font-family: "Raleway", sans-serif;
       font-weight: bolder;
       text-shadow: gray 1px 1px 1px;
       padding: 10px 0 10px 20px; }
+      @media screen and (max-width: 768px) {
+        body main .consultasdatos .ubicacionHorario .ubicacion h2 {
+          font-size: 16px; } }
     body main .consultasdatos .ubicacionHorario .ubicacion p {
-      font-size: 15px;
-      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-family: "Raleway", sans-serif;
       font-weight: bolder;
       padding: 0 0 5px 20px; }
+      @media screen and (max-width: 768px) {
+        body main .consultasdatos .ubicacionHorario .ubicacion p {
+          font-size: 14px; } }
+    @media screen and (max-width: 768px) {
+      body main .consultasdatos .ubicacionHorario .horario {
+        display: none; } }
     body main .consultasdatos .ubicacionHorario .horario h2 {
-      font-size: 15px;
-      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-family: "Raleway", sans-serif;
       font-weight: bolder;
-      padding: 80px 0 5px 20px; }
+      padding: 80px 0 5px 20px;
+      text-decoration: underline; }
     body main .consultasdatos .ubicacionHorario .horario p {
-      font-size: 15px;
-      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-family: "Raleway", sans-serif;
       font-weight: bolder;
       padding-left: 20px; }
 
@@ -199,22 +279,36 @@ body .introduccionnosotras .titulonosotras {
   font-size: 28px;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
-  text-shadow: gray 1px 0;
+  text-shadow: #6e6e6e 2px 2px 3px;
   text-align: center;
-  padding: 20px 20px 20px 20px; }
+  padding: 20px 20px 20px 20px;
+  letter-spacing: 2px;
+  font-weight: bolder; }
+  @media screen and (max-width: 768px) {
+    body .introduccionnosotras .titulonosotras {
+      font-size: 24px; } }
 
 body .introduccionnosotras .parrafonosotras {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: bolder;
   font-family: 'Raleway', sans-serif;
   line-height: 30px;
-  padding-left: 15px; }
+  color: black;
+  text-align: center;
+  font-style: italic;
+  margin: 0 10px 20px 10px; }
+  @media screen and (max-width: 768px) {
+    body .introduccionnosotras .parrafonosotras {
+      font-size: 16px; } }
 
 body .introduccionnosotras .nombresarquitectas p {
-  font-size: 14px;
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
   padding-top: 5px; }
+  @media screen and (max-width: 768px) {
+    body .introduccionnosotras .nombresarquitectas p {
+      font-size: 12px; } }
 
 /*STYLE PROYECTOS*/
 body .proyectos {
@@ -224,9 +318,14 @@ body .proyectos {
     font-size: 28px;
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
-    text-shadow: gray 1px 0;
+    text-shadow: #6e6e6e 2px 2px 3px;
     text-align: center;
-    padding: 20px 20px 20px 20px; }
+    padding: 20px 20px 20px 20px;
+    letter-spacing: 2px;
+    font-weight: bolder; }
+    @media screen and (max-width: 768px) {
+      body .proyectos .tituloproyectos {
+        font-size: 24px; } }
   body .proyectos .listadoproyectos {
     /* Para trabajar las areas de html proyectos */
     display: grid;
@@ -234,74 +333,106 @@ body .proyectos {
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     row-gap: 10px; }
-    body .proyectos .listadoproyectos .proyecto01 img {
-      width: 600px;
-      align-self: center; }
+    @media screen and (max-width: 768px) {
+      body .proyectos .listadoproyectos {
+        display: inline;
+        text-align: center; } }
+    @media screen and (max-width: 768px) {
+      body .proyectos .listadoproyectos .proyecto01 img {
+        width: 500px; } }
     body .proyectos .listadoproyectos .proyecto01 h2 {
       font-size: 18px;
       font-weight: bold;
       font-family: 'Raleway', sans-serif;
       line-height: 20px;
-      margin: 10px 0px 10px 0px;
       text-shadow: gray 1px 0;
+      margin: 10px 0px 10px 0px;
       text-align: center; }
+      @media screen and (max-width: 768px) {
+        body .proyectos .listadoproyectos .proyecto01 h2 {
+          font-size: 16px;
+          margin: 10px 0px 0px 0px; } }
     body .proyectos .listadoproyectos .proyecto01 p {
       font-size: 14px;
       font-weight: bold;
       font-family: 'Raleway', sans-serif;
       margin: 10px 0px 10px 0px;
       text-align: center; }
-    body .proyectos .listadoproyectos .proyecto02 img {
-      width: 600px;
-      align-self: center; }
+      @media screen and (max-width: 768px) {
+        body .proyectos .listadoproyectos .proyecto01 p {
+          margin: 0px 0px 10px 0px; } }
+    @media screen and (max-width: 768px) {
+      body .proyectos .listadoproyectos .proyecto02 img {
+        width: 500px; } }
     body .proyectos .listadoproyectos .proyecto02 h2 {
       font-size: 18px;
       font-weight: bold;
       font-family: 'Raleway', sans-serif;
       line-height: 20px;
-      margin: 10px 0px 10px 0px;
       text-shadow: gray 1px 0;
+      margin: 10px 0px 10px 0px;
       text-align: center; }
+      @media screen and (max-width: 768px) {
+        body .proyectos .listadoproyectos .proyecto02 h2 {
+          font-size: 16px;
+          margin: 10px 0px 0px 0px; } }
     body .proyectos .listadoproyectos .proyecto02 p {
       font-size: 14px;
       font-weight: bold;
       font-family: 'Raleway', sans-serif;
       margin: 10px 0px 10px 0px;
       text-align: center; }
-    body .proyectos .listadoproyectos .proyecto03 img {
-      width: 600px;
-      align-self: center; }
+      @media screen and (max-width: 768px) {
+        body .proyectos .listadoproyectos .proyecto02 p {
+          margin: 0px 0px 10px 0px; } }
+    @media screen and (max-width: 768px) {
+      body .proyectos .listadoproyectos .proyecto03 img {
+        width: 500px; } }
     body .proyectos .listadoproyectos .proyecto03 h2 {
       font-size: 18px;
       font-weight: bold;
       font-family: 'Raleway', sans-serif;
       line-height: 20px;
-      margin: 10px 0px 10px 0px;
       text-shadow: gray 1px 0;
+      margin: 10px 0px 10px 0px;
       text-align: center; }
+      @media screen and (max-width: 768px) {
+        body .proyectos .listadoproyectos .proyecto03 h2 {
+          font-size: 16px;
+          margin: 10px 0px 0px 0px; } }
     body .proyectos .listadoproyectos .proyecto03 p {
       font-size: 14px;
       font-weight: bold;
       font-family: 'Raleway', sans-serif;
       margin: 10px 0px 10px 0px;
       text-align: center; }
-    body .proyectos .listadoproyectos .proyecto04 img {
-      width: 600px;
-      align-self: center; }
+      @media screen and (max-width: 768px) {
+        body .proyectos .listadoproyectos .proyecto03 p {
+          margin: 0px 0px 10px 0px; } }
+    @media screen and (max-width: 768px) {
+      body .proyectos .listadoproyectos .proyecto04 img {
+        width: 500px; } }
     body .proyectos .listadoproyectos .proyecto04 h2 {
       font-size: 18px;
       font-weight: bold;
       font-family: 'Raleway', sans-serif;
       line-height: 20px;
-      margin: 10px 0px 10px 0px;
       text-shadow: gray 1px 0;
+      margin: 10px 0px 10px 0px;
       text-align: center; }
+      @media screen and (max-width: 768px) {
+        body .proyectos .listadoproyectos .proyecto04 h2 {
+          font-size: 16px;
+          margin: 10px 0px 0px 0px; } }
     body .proyectos .listadoproyectos .proyecto04 p {
       font-size: 14px;
       font-weight: bold;
       font-family: 'Raleway', sans-serif;
       margin: 10px 0px 10px 0px;
       text-align: center; }
+      @media screen and (max-width: 768px) {
+        body .proyectos .listadoproyectos .proyecto04 p {
+          margin: 0px 0px 10px 0px; } }
 
 /*STYLE SERVICIOS*/
 body .servicios {
@@ -310,81 +441,131 @@ body .servicios {
   body .servicios .tituloservicios {
     font-size: 28px;
     text-transform: uppercase;
-    font-family: 'Ibarra Real Nova', serif;
     font-family: 'Raleway', sans-serif;
-    font-weight: 1500;
-    text-shadow: gray 1px 0;
+    text-shadow: #6e6e6e 2px 2px 3px;
     text-align: center;
-    padding: 20px 20px 20px 20px; }
+    padding: 20px 20px 20px 20px;
+    letter-spacing: 2px;
+    font-weight: bolder; }
+    @media screen and (max-width: 768px) {
+      body .servicios .tituloservicios {
+        font-size: 24px; } }
   body .servicios .gruposervicios {
     /* Para trabajar las areas de html servicios */
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr 0.5fr; }
+    @media screen and (max-width: 768px) {
+      body .servicios .gruposervicios {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; } }
+    @media screen and (max-width: 768px) {
+      body .servicios .gruposervicios .servicio01 {
+        margin: 0px 30px 0px 30px; } }
     body .servicios .gruposervicios .servicio01 img {
       height: 300px;
       padding-left: 130px; }
+      @media screen and (max-width: 768px) {
+        body .servicios .gruposervicios .servicio01 img {
+          padding-left: 0px; } }
     body .servicios .gruposervicios .servicio01 h2 {
-      font-size: 16px;
-      font-weight: 900;
+      font-size: 18px;
+      font-weight: bold;
       font-family: 'Raleway', sans-serif;
       line-height: 20px;
-      margin: 10px 0px 10px 130px;
-      text-shadow: gray 1px 0; }
+      text-shadow: gray 1px 0;
+      margin: 10px 0px 10px 130px; }
+      @media screen and (max-width: 768px) {
+        body .servicios .gruposervicios .servicio01 h2 {
+          margin: 10px 0px 5px 0px;
+          font-size: 16px; } }
     body .servicios .gruposervicios .servicio01 p {
       font-size: 14px;
-      font-weight: 900;
+      font-weight: bold;
       font-family: 'Raleway', sans-serif;
-      line-height: 20px;
       margin: 10px 0px 10px 130px; }
+      @media screen and (max-width: 768px) {
+        body .servicios .gruposervicios .servicio01 p {
+          margin: 0px 50px 10px 50px; } }
+    @media screen and (max-width: 768px) {
+      body .servicios .gruposervicios .servicio02 {
+        margin: 0px 30px 0px 30px; } }
     body .servicios .gruposervicios .servicio02 img {
       height: 300px;
       padding-left: 20px; }
     body .servicios .gruposervicios .servicio02 h2 {
-      font-size: 16px;
-      font-weight: 900;
+      font-size: 18px;
+      font-weight: bold;
       font-family: 'Raleway', sans-serif;
       line-height: 20px;
-      margin: 10px 0px 10px 20px;
-      text-shadow: gray 1px 0; }
+      text-shadow: gray 1px 0;
+      margin: 10px 0px 5px 20px; }
+      @media screen and (max-width: 768px) {
+        body .servicios .gruposervicios .servicio02 h2 {
+          margin: 10px 0px 5px 0px;
+          font-size: 16px; } }
     body .servicios .gruposervicios .servicio02 p {
       font-size: 14px;
-      font-weight: 900;
+      font-weight: bold;
       font-family: 'Raleway', sans-serif;
-      line-height: 20px;
       margin: 10px 0px 10px 20px; }
+      @media screen and (max-width: 768px) {
+        body .servicios .gruposervicios .servicio02 p {
+          margin: 0px 50px 10px 50px; } }
+    @media screen and (max-width: 768px) {
+      body .servicios .gruposervicios .servicio03 {
+        margin: 0px 30px 0px 30px; } }
     body .servicios .gruposervicios .servicio03 img {
       height: 300px;
       padding-left: 20px; }
     body .servicios .gruposervicios .servicio03 h2 {
-      font-size: 16px;
-      font-weight: 900;
+      font-size: 18px;
+      font-weight: bold;
       font-family: 'Raleway', sans-serif;
       line-height: 20px;
-      margin: 10px 0px 10px 20px;
-      text-shadow: gray 1px 0; }
+      text-shadow: gray 1px 0;
+      margin: 10px 0px 5px 20px; }
+      @media screen and (max-width: 768px) {
+        body .servicios .gruposervicios .servicio03 h2 {
+          margin: 10px 0px 5px 0px;
+          font-size: 16px; } }
     body .servicios .gruposervicios .servicio03 p {
       font-size: 14px;
-      font-weight: 900;
+      font-weight: bold;
       font-family: 'Raleway', sans-serif;
-      line-height: 20px;
       margin: 10px 0px 10px 20px; }
+      @media screen and (max-width: 768px) {
+        body .servicios .gruposervicios .servicio03 p {
+          margin: 0px 50px 10px 50px; } }
+    @media screen and (max-width: 768px) {
+      body .servicios .gruposervicios .servicio04 {
+        margin: 0px 30px 0px 30px; } }
     body .servicios .gruposervicios .servicio04 img {
       height: 300px;
       padding-left: 20px;
       padding-right: 130px; }
+      @media screen and (max-width: 768px) {
+        body .servicios .gruposervicios .servicio04 img {
+          padding-right: 0px; } }
     body .servicios .gruposervicios .servicio04 h2 {
-      font-size: 16px;
-      font-weight: 900;
+      font-size: 18px;
+      font-weight: bold;
       font-family: 'Raleway', sans-serif;
       line-height: 20px;
-      margin: 10px 0px 10px 20px;
-      text-shadow: gray 1px 0; }
+      text-shadow: gray 1px 0;
+      margin: 10px 0px 5px 20px; }
+      @media screen and (max-width: 768px) {
+        body .servicios .gruposervicios .servicio04 h2 {
+          margin: 10px 0px 5px 0px;
+          font-size: 16px; } }
     body .servicios .gruposervicios .servicio04 p {
       font-size: 14px;
-      font-weight: 900;
+      font-weight: bold;
       font-family: 'Raleway', sans-serif;
-      line-height: 20px;
-      margin: 10px 120px 10px 20px; }
+      margin: 0px 120px 10px 20px; }
+      @media screen and (max-width: 768px) {
+        body .servicios .gruposervicios .servicio04 p {
+          margin: 0px 50px 10px 50px; } }
 
 /* Estilos Mobile */
 @media screen and (max-width: 768px) {
