@@ -68,7 +68,7 @@ body{
         background-position-y: 10px;
         @include media-up (md){
                 background-size: auto;
-                height: 110vh;
+                height: 100vh;
         }
         .textoPrincipal{
             h1{
@@ -242,7 +242,7 @@ body{
                             text-transform: uppercase;
                             font-size: 28px;
                             text-align: center;
-                            padding: 20px 0px 20px 0px;
+                            padding: 20px 0px 10px 0px;
                             font-size: 24px;
                         }
                     }
@@ -295,7 +295,7 @@ body{
                 @include media-up (md){
                     text-align:center;
                     padding-right: 0px;
-                    margin-top: 20px;
+                    margin-top: 10px;
                 }
                 .ubicacion{
                     h2{
@@ -306,6 +306,7 @@ body{
                         padding: 10px 0 10px 20px;
                         @include media-up (md){
                             font-size: nth($tamaño-fuente,3);
+                            
                         }
                     }
                     p{
@@ -349,6 +350,7 @@ body{
             @include estilo-titulospag;
             @include media-up (md){
                 font-size: 24px;
+                margin-bottom: 0px;
             }
         }
         .parrafonosotras{
@@ -392,107 +394,81 @@ body{
             justify-items: center;
             row-gap: 10px;
             @include media-up (md){
-                display: inline;
-                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
             }
             .proyecto01{
+                @include media-up (md){
+                    transform: scale(0.9);
+                }
                 img{
                     @extend %img;
-                    @include media-up (md){
-                        width: 500px;
-                    }
                 }
                 h2{
                     @include estilo-titulos;
                     margin: 10px 0px 10px 0px;
                     text-align: center;
-                    @include media-up (md){
-                        font-size: 16px;
-                        margin: 10px 0px 0px 0px;
-                    }
                 }
                 p{
                     @include estilo-descripcion;
                     margin: 10px 0px 10px 0px; 
                     text-align: center;
-                    @include media-up (md){
-                        margin: 0px 0px 10px 0px; 
-                    }
                 }
             }
             .proyecto02{
+                @include media-up (md){
+                    transform: scale(0.9);
+                }
                 img{
                     @extend %img;
-                    @include media-up (md){
-                        width: 500px;
-                    }
                 }
                 h2{
                     @include estilo-titulos;
                     margin: 10px 0px 10px 0px;
                     text-align: center;
-                    @include media-up (md){
-                        font-size: 16px;
-                        margin: 10px 0px 0px 0px;
-                    }
                 }
                 p{
                     @include estilo-descripcion;
                     margin: 10px 0px 10px 0px;  
                     text-align: center;
-                    @include media-up (md){
-                        margin: 0px 0px 10px 0px; 
-                    }
                 }
             }
             .proyecto03{
+                @include media-up (md){
+                    transform: scale(0.9);
+                }
                 img{
                     @extend %img;
-                    @include media-up (md){
-                        width: 500px;
-                    }
                 }
                 h2{
                     @include estilo-titulos;
                     margin: 10px 0px 10px 0px;
                     text-align: center;
-                    @include media-up (md){
-                        font-size: 16px;
-                        margin: 10px 0px 0px 0px;
-                    }
                 }
                 p{
                     @include estilo-descripcion;
                     margin: 10px 0px 10px 0px; 
                     text-align: center; 
-                    @include media-up (md){
-                        margin: 0px 0px 10px 0px; 
-                    }
                 }
             }
             .proyecto04{
+                @include media-up (md){
+                    transform: scale(0.9);
+                }
                 img{
                     @extend %img;
-                    @include media-up (md){
-                        width: 500px;
-                    }
                 }
                 h2{
                     @include estilo-titulos;
                     margin: 10px 0px 10px 0px;
                     text-align: center;
-                    @include media-up (md){
-                        font-size: 16px;
-                        margin: 10px 0px 0px 0px;
-                    }
                 }
                 p{
                     @include estilo-descripcion;
                     margin: 10px 0px 10px 0px; 
                     text-align: center;
-                    @include media-up (md){
-                        margin: 0px 0px 10px 0px; 
-                    }
                 }
             }
         }
@@ -516,9 +492,10 @@ body{
             display: grid;
             grid-template-columns: 1fr 0.5fr 1fr 0.5fr;
             @include media-up (md){
-                display:flex;
+                display: flex;
                 flex-direction: column;
-                justify-content: center;
+                align-items: center;
+                justify-items: center;
             }
             .servicio01{
                 @include media-up (md){
